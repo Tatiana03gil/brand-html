@@ -17,7 +17,7 @@ a {
 .header {
     background-color: #222222;
     padding-top: 18px;
-    padding-bottom: 19px;
+    padding-bottom: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,8 +29,15 @@ a {
     align-items: flex-end;
 }
 
+.menu-bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .menu {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 30px;
 }
@@ -103,6 +110,10 @@ a {
 }
 
 .item-img {
+    filter: brightness(30%);
+}
+
+.acs {
     filter: brightness(30%);
 }
 
@@ -215,4 +226,76 @@ a {
     padding: 15px 39px;
     border-color: #FF6A6A;
     background: #FFF;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 310px);
+        padding-right: calc(50% - 310px);
+    }
+
+    .menu-bar {
+        gap: 42px;
+    }
+
+    .menu {
+        gap: 25px;
+    }
+
+    .brand {
+        display: flex;
+        gap: 39px;
+        padding-left: calc(50% - 386px);
+        padding-right: calc(50% - 386px);
+        align-items: center;
+    }
+
+    .brand-name {
+        margin-bottom: 0;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .caps {
+        font-size: 44px;
+    }
+
+    .catalog {
+        gap: 20px;
+    }
+
+    .item-img {
+        max-width: 232px;
+    }
+
+    .acs {
+        max-width: 736px;
+    }
+
+    .offers {
+        padding-top: 45px;
+        padding-bottom: 70.5px;
+    }
+
+    .title {
+        margin-bottom: 3px;
+    }
+
+    .products {
+        padding-top: 73px;
+        padding-bottom: 33px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .subtitle {
+        margin-bottom: 12.65px;
+    }
+
+    .offer-text {
+        margin-bottom: 16px;
+    }
 }
