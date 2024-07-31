@@ -109,6 +109,7 @@ nav svg {
 .menu-bar:hover .list {
     overflow: visible;
     opacity: 10;
+    z-index: 2;
 }
 
 .brand-info {
@@ -158,6 +159,7 @@ nav svg {
     padding-top: 65px;
     padding-bottom: 65px;
     justify-content: center;
+    z-index: 1;
 }
 
 .it {
@@ -536,7 +538,7 @@ nav svg {
     fill: white;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .center {
         padding-left: calc(50% - 367px);
         padding-right: calc(50% - 367px);
@@ -557,18 +559,15 @@ nav svg {
     }
 
     .categories {
-        -ms-grid-rows: auto 20px 116px;
-        grid-template-rows: auto 116px;
+
         gap: 20px;
     }
 
-    .category img {
+    .it-img {
         max-width: 232px;
     }
-
-    .accesories img {
-        max-height: 100%;
-        max-width: 100%;
+    .acs {
+        max-width: 736px;
     }
 
     .featured {
@@ -622,8 +621,8 @@ nav svg {
 
 @media (max-width: 767px) {
     .center {
-        padding-left: calc(50% - 180px);
-        padding-right: calc(50% - 180px);
+        padding-left: calc(50% - 343px/2);
+        padding-right: calc(50% - 343px/2);
     }
 
     .hidden {
@@ -650,40 +649,24 @@ nav svg {
     }
 
     .categories {
-        -ms-grid-rows: 1fr 35px 1fr 35px 1fr 35px 111px;
-        grid-template-rows: 1fr 1fr 1fr 111px;
-        -ms-grid-columns: 343px;
-        grid-template-columns: 343px;
-        gap: 35px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
 
-    .categories>*:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
-    }
-
-    .categories>*:nth-child(2) {
-        -ms-grid-row: 3;
-        -ms-grid-column: 1;
-    }
-
-    .categories>*:nth-child(3) {
-        -ms-grid-row: 5;
-        -ms-grid-column: 1;
-    }
-
-    .categories>*:nth-child(4) {
-        -ms-grid-row: 7;
-        -ms-grid-column: 1;
-    }
-
-    .category img {
+    .it-img {
         max-width: 343px;
     }
 
-    .accesories img {
-        min-height: 100%;
+    .it-acs {
         overflow: hidden;
+    }
+
+    .acs {
+        height: 100%;
+        width: auto;
     }
 
     .featured {
